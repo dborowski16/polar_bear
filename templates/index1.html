@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Polar Bear Migration</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Leaflet CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+  integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+  integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+  crossorigin=""></script>
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="static/style.css">
+
+
+
+</head>
+
+<body>
+  <div id="banner" style=" z-index: 3; position: web-sticky;  max-width: 1720px;   color: rgb(255, 255, 255); background-color: rgb(64, 53, 71); border-radius: 10px; 
+             padding-top: 20px;  padding-bottom: 120px;           padding-left: 20px;
+             margin-left:100px;  margin-right: 2%;               margin-bottom: 40px; -->
+             border-style:solid; border-color:rgb(87, 71, 97); border-width: 6px; margin-top : 50px; ">
+             <!-- margin-top : 50px;  -->
+            <font style="font-size: 40px; margin-left :.5% ">Polar Bear Migration  </font>
+            <font style="font-size: 35px; margin-left :2%"> |   </font>
+            <font style="font-size: 36px; margin-left :3%"> Group Project </font>
+            <img src="static/polarbearimage1.jpg" alt="group_img" style="float:right; height: 250px; width: 350px; margin-right: 20%; opacity: 1; mix-blend-mode: screen;">
+            <br>
+            <a id="buttons_top" href="moreData.html" style="border-radius: 15px; background-color: rgb(86, 86, 179); 
+            position: absolute; width:90px; height:100px; 
+            margin-top:15px; margin-left: 20px; 
+            padding-top:10px; padding-left: 5px; 
+            border-style: groove; border-color: rgb(151, 114, 190); border-width: 4px; 
+            font-size: 18px; font-weight: bold; font-family: Arial; color: rgb(195, 179, 245); text-decoration: none;  "> More Data </a>        
+              
+    <br> 
+</div> 
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Polar Bear Migration</h1>
+        <p>Select a Bear Id to follow each individual bear's journey</p>
+      </div>
+    </div>
+      <!-- The div where we will inject our map -->
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>PolarBear ID No.:</h5>
+          <select id="selBear" >
+            <!-- <option value = "BearID_32">BearID_32</option>
+            <option value = "BearID_281">BearID_281</option>
+            <option value = "BearID_7">BearID_7</option>
+            <option value = "BearID_52">BearID_52</option>
+            <option value = "BearID_144">BearID_144</option>
+            <option value = "BearID_302">BearID_302</option>
+            <option value = "BearID_89">BearID_89</option>
+            <option value = "BearID_160">BearID_160</option>
+            <option value = "BearID_50">BearID_50</option>
+            <option value = "BearID_139">BearID_139</option>
+            <option value = "BearID_114">BearID_114</option>
+            <option value = "BearID_129">BearID_129</option>
+            <option value = "BearID_207">BearID_207</option>
+            <option value = "BearID_135">BearID_135</option>
+            <option value = "BearID_204">BearID_204</option>
+            <option value = "BearID_38">BearID_38</option>
+            <option value = "BearID_213">BearID_213</option>
+            <option value = "BearID_250">BearID_250</option>
+            <option value = "BearID_179">BearID_179</option>
+            <option value = "BearID_294">BearID_294</option> -->
+        </select>  
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Travel Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class='col-md-10' style="height: 400px">
+        <div id="map" style="height: 100%; width: 100%"></div>  
+        
+      </div>
+      <div class="row">
+      <div class="col-md-2">
+         <!-- The div where we will inject our map -->
+        <div id="map" style="height: 100%"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <!-- The div where we will inject our map -->
+        <div id="map"></div>
+        <div id="map"></div>
+        <!-- <div id="bubble"></div> -->
+        
+        <div id="div1">
+          <div id="div1a">
+           <div class="tooltip" style=" float: right;       position: center;">  
+                 <img id="icon1" src="XXX" alt="XXX" style="height: 52%; width: 100%;   padding-left: 30%; margin-right: 0px;"> 
+                 <!-- <span class="tooltiptext"> XXX </span> -->
+              </a>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div id="map"></div>  
+          
+          <h1>Movement and Migration </h1><br>
+          <h6>Source: Circumpolar Action Plan</h6>
+          <ul>Data from satellite telemetry transmitters on female polar bears have shown that they do not wander aimlessly, but that their movements and 
+           distribution are determined by the way they use the sea ice habitat as a platform for feeding, mating, denning and, in some subpopulations, summer retreat areas.</ul>
+        
+           <ul>They tend to move on drifting ice to remain in productive habitats (e.g., over the continental shelf where seals are abundant), 
+           which often means moving against the direction of drift of the sea ice to remain in the same general geographic location.</ul>
+  
+          </div>
+          <table style="width:100%; padding-top: 5px; ">
+              <tbody><tr>
+                  <td style=" padding-top: 10px;  padding-left: 10px; "> 
+                      <ul list-style-position:="" outside;="" style="padding-right: 50px; padding-left: 20px; ">      
+                      </ul>
+                  </td>
+              </tr>                                                                       
+          </tbody></table>
+
+          </div>    
+      </div>
+    </div>
+  </div>
+
+  <!-- <script src="https://d3js.org/d3.v6.min.js"></script> -->
+  <!-- D3 JavaScript-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <!-- API key -->
+  <script type="text/javascript" src="static/config.js"></script>
+  <!-- Our JS -->
+  <script type="text/javascript" src="static/bearpaths2.js"></script>
+  <!-- Map JS-->
+  <script type="text/javascript" src="static/logic2.js"></script>
+
+  
+  <div class="container">
+    <div class="row">
+  <div class = "col-md-12">
+    <div class="box">
+        <h2 class="title">USGS Alaska Science Center</h2>
+        <h3 class="title">Chukchi Sea Polar Bear Tracking Maps</h3>
+        <p> Available here are location tracking data collected from satellite radio-collars fitted on adult female polar bears in the Chukchi Sea, between 1985-1996. 
+          The collars were attached to adult female polar bears captured within the Chukchi Sea subpopulation boundaries as identified by the International Union for the 
+          Conservation of Nature's Polar Bear Specialist Group.</p>
+
+  <div class="col-md-12" align="center"></div>      
+    <img src="https://alaska.usgs.gov/products/data/tracking/ChukchiSeaPolarBearLocation1985_1996/ChukchiSeaPolarBearLocation1985_1996_all_animals_animation_geo_v13.gif" alt="All animals tracking in an animated gif">
+
+
+
+        <hr>
+</body>
+</html>
+</body>
+</html>

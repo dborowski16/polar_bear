@@ -1,0 +1,8 @@
+{
+    "bears":["BearID_32", "BearID_281", "BearID_7", "BearID_52", "BearID_144", "BearID_302", "BearID_89", "BearID_160", "BearID_50", "BearID_139", "BearID_114", "BearID_129", 
+    "BearID_207", "BearID_135", "BearID_204", "BearID_38", "BearID_213", "BearID_294", "BearID_250", "BearID_179"],
+    "metadata":[{"id":"BearID_32", "distance":11289}, {"id":"BearID_281", "distance":10347}, {"id":"BearID_7", "distance":13524}, {"id":"BearID_52", "distance":22562}, {"id":"BearID_144", "distance":16047}, 
+    {"id":"BearID_302", "distance": 4727}, {"id":"BearID_89", "distance": 13176}, {"id":"BearID_160", "distance":7072}, {"id":"BearID_50", "distance":10844}, {"id":"BearID_139", "distance":10794}, 
+    {"id":"BearID_114", "distance":10149}, {"id":"BearID_129", "distance":13883}, {"id":"BearID_207", "distance":6223}, {"id":"BearID_135", "distance":5502}, {"id":"BearID_204", "distance":5248}, 
+    {"id":"BearID_38", "distance":13267}, {"id":"BearID_213", "distance":9262}, {"id":"BearID_294", "distance":5559}, {"id":"BearID_250", "distance":6612}, {"id":"BearID_179", "distance":10591}]
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Polar Bear Migration</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Leaflet CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+  integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+  integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+  crossorigin=""></script>
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+
+
+</head>
+
+<body>
+  <div id="banner" style=" z-index: 3; position: web-sticky;  max-width: 1720px;   color: rgb(255, 255, 255); background-color: rgb(64, 53, 71); border-radius: 10px; 
+             padding-top: 100px;  padding-bottom: 100px;           padding-left: 20px;
+             margin-left:100px;  margin-right: 2%;               margin-bottom: 40px; -->
+             border-style:solid; border-color:rgb(87, 71, 97); border-width: 6px; margin-top : 50px; "
+             
+            <font style="font-size: 40px; margin-left :.5% ">Polar Bear Migration  </font>
+            <font style="font-size: 35px; margin-left :2%"> |   </font>
+            <font style="font-size: 36px; margin-left :3%"> Group Project </font>
+            <img src="Images/polarbearimage1.jpg" alt="group_img" style="float:right; height: 100%; width: 25%; margin-right: 20%; opacity: 1; mix-blend-mode: screen;">
+            <br>
+              
+    <br> 
+</div> 
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Polar Bear Migration</h1>
+        <p>Select a Bear Id to follow each individual bear's journey</p>
+      </div>
+    </div>
+      <!-- The div where we will inject our map -->
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>PolarBear ID No.:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Travel Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class='col-md-10' style="height: 400px">
+        <div id="map" style="height: 100%; width: 100%"></div>  
+        
+      </div>
+      <div class="row">
+      <div class="col-md-2">
+         <!-- The div where we will inject our map -->
+        <div id="map" style="height: 100%"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <!-- The div where we will inject our map -->
+        <div id="map"></div>
+        <div id="map"></div>
+        <!-- <div id="bubble"></div> -->
+        
+        <div id="div1">
+          <div id="div1a">
+           <div class="tooltip" style=" float: right;       position: center;">  
+                 <img id="icon1" src="XXX" alt="XXX" style="height: 52%; width: 52%;   padding-left: 30%; margin-right: 0px;"> 
+                 <span class="tooltiptext"> XXX </span>
+              </a>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div id="map"></div>  
+          
+          <h1>Movement and Migration </h1><br>
+          <h6>Source: Circumpolar Action Plan</h6>
+          <ul>Data from satellite telemetry transmitters on female polar bears have shown that they do not wander aimlessly, but that their movements and 
+           distribution are determined by the way they use the sea ice habitat as a platform for feeding, mating, denning and, in some subpopulations, summer retreat areas.</ul>
+        
+           <ul>They tend to move on drifting ice to remain in productive habitats (e.g., over the continental shelf where seals are abundant), 
+           which often means moving against the direction of drift of the sea ice to remain in the same general geographic location.</ul>
+  
+          </div>
+          <table style="width:100%; padding-top: 5px; ">
+              <tbody><tr>
+                  <td style=" padding-top: 10px;  padding-left: 10px; "> 
+                      <ul list-style-position:="" outside;="" style="padding-right: 50px; padding-left: 20px; ">      
+                      </ul>
+                  </td>
+              </tr>                                                                       
+          </tbody></table>
+
+          </div>    
+      </div>
+    </div>
+  </div>
+
+  <!-- API key -->
+  <script type="text/javascript" src="config.js"></script>
+  <!-- Our JS -->
+  <script type="text/javascript" src="bearpaths.js"></script>
+</body>
+</html>
